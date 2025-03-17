@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en ca">
+  <head>
+	    <!-- created by Catherine Patterson on 29/01/25 -->
+    <meta charset="UTF-8">
+    <title> Website - Project Details</title>
+  
+    <!-- Poppins Header Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Gelasio Body Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+      .wrapper{
+        width: 1200px;
+        margin: auto;
+        font-family: "Gelasio", serif;
+      }
+      
+      .nav-bar{
+        width: 100%;
+        box-shadow: 0px 5px #16161b;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .nav-bar ul{
+        background-color: #2c2c35;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        margin-top: -8px;
+        overflow: hidden;
+      }
+      
+      .nav-bar li{
+        float: left;
+      }
+      
+      .nav-bar a{
+        color: #f9dc6f;
+        font-size: 16px;
+        font-family: "Poppins", serif;
+        text-decoration: none;
+        padding: 15px 50px;
+        display: block;
+        text-align: center;
+      }
+      
+      #last-item{
+        float: right;
+        padding: 0px;
+        margin: -7px;
+      }
+      
+      .nav-bar a:hover{
+        background-color: #16161b;
+      }
+      
+      .nav-bar img{
+        width:30px;
+        height:30px;
+      }
+      
+      .project-details{
+        width: 100%;
+        font-size: 16px;
+        text-align: justify;
+        color: #2C2C35;
+        background-color: #FAF0E7;
+      }
+      
+      .header{
+        width: 100%;
+        display: inline;
+      }
+      
+      .title{
+        width: 70%;
+        float: left;
+        margin-bottom: 15px;
+      }
+      
+      .details{
+        width: 30%;
+        float: right;
+        text-align: right;
+      }
+      
+      .details img{
+        width: 45px;
+        height: 45px;
+      }
+      
+      .body-info{
+        width: 100%;
+        line-height: 22px;
+        padding-bottom: 10px;
+      }
+      
+      .quote{
+        font-style: italic;
+        font-size: 20px;
+        color: #DE98E6;
+        text-shadow: .5px .5px 2px #FFF;
+        margin: 0px 0px 0px 25px;
+        padding: 0px;
+      }
+      
+      .citation{
+        margin-top: 2px;
+        padding-left: 155px;
+        color: #77306A;
+      }
+      
+      * {box-sizing: border-box}
+
+      /* Slideshow container */
+      .slideshow-container {
+        width: 1200px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+      
+      .mySlides img{
+        width: 100%;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: #16161b;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0px 2px 15px 2px;
+        background-color: #77306A;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #DE98E6;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      
+      body{
+        margin-left: 0px;
+        background-color: #2c2c35;
+      }
+      
+      h1, h2, h3{
+        font-family: "Poppins", sans-serif;
+      }
+      
+      h1{
+        margin: 25px 0px 5px 25px;
+        font-size: 48px;
+        padding-bottom: 0px;
+      }
+      
+      h2{
+        margin: 30px 25px 0px 0px;
+      }
+      
+      h3{
+        margin: -2px 25px 5px 0px;
+      }
+      
+      p{
+        margin: 0px 25px 30px 25px;
+      }
+      
+      #last-img{
+        margin-right: 25px;
+      }
+      
+      .divider{
+        width: 100%;
+        height: 20px;
+        background-color: #DE98E6;
+        margin-top: -6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav-bar">
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">GRAPHIC DESIGN</a></li>
+          <li><a href="">COMPUTING</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li id="last-item"><a                 href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
+        </ul>
+      </div>
+      
+      <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images -->
+      <div class="mySlides fade">
+        <img src="first-page-web.png" alt="">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="second-page-web.png" alt="">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="og-sitemap.png" alt="">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="upd-sitemap.png" alt="">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+      
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }  
+      </script>
+      <div class="divider">
+      </div>
+      <div class="project-details">
+        <div class="header">
+          <div class="title">
+            <h1>
+            Tina's Grill
+            </h1>
+          </div>
+          <div class="details">
+            <h2>
+            Website Redesign
+            </h2>
+            <h3>
+              February 2025
+            </h3>
+            <img src="photoshop_logo.png" alt="Adobe Photoshop logo">
+            <img id="last-img" src="illustrator_logo.png" alt="Adobe Illustrator logo">
+          </div>
+        </div>
+        <div class="body-info">
+          <p class="quote">
+            " A family owned restaurant on the south west side of Aurora
+            <br> &nbsp; &nbsp;where everyone knows your name! "
+          </p>
+
+          <p class="citation">
+            - Tina's Grill, on <i>Facebook</i>, 2019
+          </p>
+
+          <p>
+            caption goes here  
+            
+           
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
