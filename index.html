@@ -67,27 +67,25 @@
       
       .project-details{
         width: 100%;
-        font-size: 16px;
-        text-align: justify;
-        color: #2C2C35;
         background-color: #FAF0E7;
-      }
-      
-      .header{
-        width: 100%;
-        display: inline;
+        color: #2c2c35;
+        padding-bottom: 10px;
       }
       
       .title{
-        width: 70%;
+        width: 50%;
         float: left;
-        margin-bottom: 15px;
+        margin: 25px 0px 15px 25px;
+        font-size: 48px;
+        padding-bottom: 0px;
+        font-family: "Poppins", sans-serif;
       }
       
       .details{
-        width: 30%;
         float: right;
+        width: 47%;
         text-align: right;
+        font-family: "Poppins", sans-serif;
       }
       
       .details img{
@@ -95,24 +93,26 @@
         height: 45px;
       }
       
-      .body-info{
-        width: 100%;
-        line-height: 22px;
-        padding-bottom: 10px;
+      .details h2{
+        margin: 30px 25px 0px 0px;
+      }
+      
+      .details h3{
+        margin: -2px 25px 5px 0px;
       }
       
       .quote{
         font-style: italic;
-        font-size: 20px;
         color: #DE98E6;
         text-shadow: .5px .5px 2px #FFF;
-        margin: 0px 0px 0px 25px;
-        padding: 0px;
+        font-size: 20px;
+        margin-bottom: 2px;
+        margin-top: -15px;
       }
       
       .citation{
         margin-top: 2px;
-        padding-left: 320px;
+        padding-left: 155px;
         color: #77306A;
       }
       
@@ -120,7 +120,7 @@
 
       /* Slideshow container */
       .slideshow-container {
-        width: 1200px;
+        width: 1000px;
         position: relative;
         margin: auto;
       }
@@ -193,24 +193,6 @@
         background-color: #2c2c35;
       }
       
-      h1, h2, h3{
-        font-family: "Poppins", sans-serif;
-      }
-      
-      h1{
-        margin: 25px 0px 5px 25px;
-        font-size: 48px;
-        padding-bottom: 0px;
-      }
-      
-      h2{
-        margin: 30px 25px 0px 0px;
-      }
-      
-      h3{
-        margin: -2px 25px 5px 0px;
-      }
-      
       p{
         margin: 0px 25px 30px 25px;
       }
@@ -224,6 +206,7 @@
         height: 20px;
         background-color: #DE98E6;
         margin-top: -6px;
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -235,7 +218,7 @@
           <li><a href="">GRAPHIC DESIGN</a></li>
           <li><a href="">COMPUTING</a></li>
           <li><a href="">ABOUT</a></li>
-          <li id="last-item"><a                 href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
+          <li id="last-item"><a href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
         </ul>
       </div>
       
@@ -302,30 +285,26 @@
           dots[slideIndex-1].className += " active";
         }  
       </script>
+      
       <div class="divider"></div>
+      
       <div class="project-details">
-        <div class="header">
-          <div class="title">
-            <h1>Tina's Grill</h1>
-          </div>
-          <div class="details">
-            <h2>Website Redesign</h2>
-            <h3>February 2025</h3>
-            <img src="photoshop_logo.png" alt="Adobe Photoshop logo">
-            <img id="last-img" src="illustrator_logo.png" alt="Adobe Illustrator logo">
-          </div>
+        <h1 class="title">Tina's Grill</h1>
+        <div class="details">
+          <h2>Website Redesign</h2>
+          <h3>February 2025</h3>
+          <img src="photoshop_logo.png" alt="Adobe Photoshop logo">
+          <img id="last-img" src="illustrator_logo.png" alt="Adobe Illustrator logo">
         </div>
-        <div class="body-info">
-          <p class="quote">
-            "A family owned restaurant on the south west side of Aurora<br>&nbsp; where everyone knows your name!"
-          </p>
-          <p class="citation">
-            - Tina's Grill, on <i>Facebook</i>, 2019
-          </p>
-          <p>
-              The original website for Tina's Grill had important issues regarding the website’s older style and monotonous appearance, missing information, and its inefficient layout. The redesign addresses each of these issues. Visually, by adding bold graphics, new colour shades, and unique fonts to enhance readability and strengthen the restaurant’s fun tone. Content-wise by removing repeated information and adding much needed missing information. As for usability, the project is designed with the user in mind, adding shortcuts for easy use and information hierarchy for readability. The result is a fuller, more pleasant and efficient experience navigating Tina's Grill website. 
-          </p>
-        </div>
+        <p class="quote">
+          "A family owned restaurant on the south west side of Aurora<br>&nbsp; where everyone knows your name!"
+        </p>
+        <p class="citation">
+          - Tina's Grill, on <i>Facebook</i>, 2019
+        </p>
+        <p>
+          The original website for Tina's Grill had important issues regarding the website’s older style and monotonous appearance, missing information, and its inefficient layout. The redesign addresses each of these issues. Visually, by adding bold graphics, new colour shades, and unique fonts to enhance readability and strengthen the restaurant’s fun tone. Content-wise by removing repeated information and adding much needed missing information. As for usability, the project is designed with the user in mind, adding shortcuts for easy use and information hierarchy for readability. The result is a fuller, more pleasant and efficient experience navigating Tina's Grill website. 
+        </p>
       </div>
     </div>
   </body>
