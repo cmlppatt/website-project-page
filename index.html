@@ -15,25 +15,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <style>
-      .wrapper{
-        width: 1200px;
-        margin: auto;
-        font-family: "Gelasio", serif;
+      .wrapper-slides{
+        background-color: #2c2c35;
       }
       
       .nav-bar{
         width: 100%;
+        background-color: #2c2c35;
         box-shadow: 0px 5px #16161b;
         position: relative;
         z-index: 1;
       }
       
       .nav-bar ul{
+        width: 1200px;
+        text-align: center;
         background-color: #2c2c35;
         list-style-type: none;
         padding: 0px;
-        margin: 0px;
-        margin-top: -8px;
+        margin: 0px auto;
         overflow: hidden;
       }
       
@@ -65,11 +65,11 @@
         margin-bottom: -10px;
       }
       
-      .project-details{
-        width: 100%;
-        background-color: #FAF0E7;
+       .project-details{
         color: #2c2c35;
         padding-bottom: 10px;
+        width: 1200px;
+        margin: auto;
       }
       
       .title{
@@ -116,9 +116,7 @@
         color: #77306A;
       }
       
-      * {box-sizing: border-box}
-
-      /* Slideshow container */
+       /* Slideshow container */
       .slideshow-container {
         width: 1000px;
         position: relative;
@@ -127,11 +125,14 @@
 
       /* Hide the images by default */
       .mySlides {
-        display: none;
+         display: none;
       }
       
       .mySlides img{
-        width: 100%;
+        max-height: 600px;
+        padding-top: 5px;
+        display: block;
+        margin: 0 auto;
       }
 
       /* Next & previous buttons */
@@ -189,8 +190,11 @@
       }
       
       body{
-        margin-left: 0px;
-        background-color: #2c2c35;
+        background-color: #FAF0E7;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Gelasio", serif;
       }
       
       p{
@@ -211,17 +215,17 @@
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="nav-bar">
-        <ul>
-          <li><a href="">COUNTRY ROADS</a></li>
-          <li><a href="">GRAPHIC DESIGN</a></li>
-          <li><a href="">COMPUTING</a></li>
-          <li><a href="">ABOUT</a></li>
-          <li id="last-item"><a href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
-        </ul>
-      </div>
-      
+    <div class="nav-bar">
+      <ul>
+        <li><a href="">COUNTRY ROADS</a></li>
+        <li><a href="">GRAPHIC DESIGN</a></li>
+        <li><a href="">COMPUTING</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li id="last-item"><a href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
+      </ul>
+    </div>
+    
+    <div class="wrapper-slides">
       <!-- Slideshow container -->
       <div class="slideshow-container">
         <!-- Full-width images -->
@@ -236,7 +240,7 @@
         <div class="mySlides fade">
           <img src="og-sitemap.png" alt="A sitemap showing the original layout of Tina's Grill website. We see four main pages with very little sub-sections and a lot of repeating information.">
         </div>
-      
+
         <div class="mySlides fade">
           <img src="upd-sitemap.png" alt="A sitemap showing the updated layout of Tina's Grill website. We now see five main pages with multiple sub-sections organized logically with no repeating information.">
         </div>
@@ -254,11 +258,11 @@
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
       </div>
-      
+
       <script>
         let slideIndex = 1;
         showSlides(slideIndex);
-
+        
         // Next/previous controls
         function plusSlides(n) {
           showSlides(slideIndex += n);
@@ -279,33 +283,33 @@
             slides[i].style.display = "none";
           }
           for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace(" active", ""); 
           }
           slides[slideIndex-1].style.display = "block";
           dots[slideIndex-1].className += " active";
         }  
       </script>
+    </div>
+    
+    <div class="divider"></div>
       
-      <div class="divider"></div>
-      
-      <div class="project-details">
-        <h1 class="title">Tina's Grill</h1>
-        <div class="details">
-          <h2>Website Redesign</h2>
-          <h3>February 2025</h3>
-          <img src="photoshop_logo.png" alt="Adobe Photoshop logo">
-          <img id="last-img" src="illustrator_logo.png" alt="Adobe Illustrator logo">
-        </div>
-        <p class="quote">
-          "A family owned restaurant on the south west side of Aurora<br>&nbsp; where everyone knows your name!"
-        </p>
-        <p class="citation">
-          - Tina's Grill, on <i>Facebook</i>, 2019
-        </p>
-        <p>
-          The original website for Tina's Grill had important issues regarding the website’s older style and monotonous appearance, missing information, and its inefficient layout. The redesign addresses each of these issues. Visually, by adding bold graphics, new colour shades, and unique fonts to enhance readability and strengthen the restaurant’s fun tone. Content-wise by removing repeated information and adding much needed missing information. As for usability, the project is designed with the user in mind, adding shortcuts for easy use and information hierarchy for readability. The result is a fuller, more pleasant and efficient experience navigating Tina's Grill website. 
-        </p>
+    <div class="project-details">
+      <h1 class="title">Tina's Grill</h1>
+      <div class="details">
+        <h2>Website Redesign</h2>
+        <h3>February 2025</h3>
+        <img src="photoshop_logo.png" alt="Adobe Photoshop logo">
+        <img id="last-img" src="illustrator_logo.png" alt="Adobe Illustrator logo">
       </div>
+      <p class="quote">
+        "A family owned restaurant on the south west side of Aurora<br>&nbsp; where everyone knows your name!"
+      </p>
+      <p class="citation">
+        - Tina's Grill, on <i>Facebook</i>, 2019
+      </p>
+      <p>
+        The original website for Tina's Grill had important issues regarding the website’s older style and monotonous appearance, missing information, and its inefficient layout. The redesign addresses each of these issues. Visually, by adding bold graphics, new colour shades, and unique fonts to enhance readability and strengthen the restaurant’s fun tone. Content-wise by removing repeated information and adding much needed missing information. As for usability, the project is designed with the user in mind, adding shortcuts for easy use and information hierarchy for readability. The result is a fuller, more pleasant and efficient experience navigating Tina's Grill website. 
+      </p>
     </div>
   </body>
 </html>
