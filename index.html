@@ -15,10 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <style>
-      .wrapper-slides{
-        background-color: #2c2c35;
+      body{
+        background-color: #FAF0E7;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Gelasio", serif;
+        color: #2C2C35;
       }
       
+      p{
+        margin: 0px 25px 30px 25px;
+      }
+      
+      /* Nav bar rules */
       .nav-bar{
         width: 100%;
         background-color: #2c2c35;
@@ -63,6 +73,19 @@
         width: 30px;
         margin-top: -5px;
         margin-bottom: -10px;
+      }
+      
+      /* Page layout */
+      .divider{
+        width: 100%;
+        height: 20px;
+        background-color: #DE98E6;
+        margin-top: -6px;
+        margin-bottom: 15px;
+      }
+      
+      .wrapper-slides{
+        background-color: #2c2c35;
       }
       
        .project-details{
@@ -116,14 +139,24 @@
         color: #77306A;
       }
       
-       /* Slideshow container */
+      #last-img{
+        margin-right: 25px;
+      }
+      
+      /* Slideshow container */
+      /* 
+        Code copied from: https://www.youtube.com/watch?v=1CZhGDU5cWM&t=421s&ab_channel=AnnaBlok%E2%80%94FrontendTutorial
+        Author: Anna Bloc Frontend Tutorial
+        Name: Responsive Slider Using HTML & CSS Only
+        Description: Video walks through steps to create an image slider with progress dots and side nav arrows.
+        Date retrieved: March 15th 2025
+      */
       .slideshow-container {
         width: 1000px;
         position: relative;
         margin: auto;
       }
 
-      /* Hide the images by default */
       .mySlides {
          display: none;
       }
@@ -135,7 +168,6 @@
         margin: 0 auto;
       }
 
-      /* Next & previous buttons */
       .prev, .next {
         cursor: pointer;
         position: absolute;
@@ -151,18 +183,15 @@
         user-select: none;
       }
 
-      /* Position the "next button" to the right */
       .next {
         right: 0;
         border-radius: 3px 0 0 3px;
       }
 
-      /* On hover, add a black background color with a little bit see-through */
       .prev:hover, .next:hover {
         background-color: #16161b;
       }
 
-      /* The dots/bullets/indicators */
       .dot {
         cursor: pointer;
         height: 15px;
@@ -178,7 +207,6 @@
         background-color: #DE98E6;
       }
 
-      /* Fading animation */
       .fade {
         animation-name: fade;
         animation-duration: 1.5s;
@@ -187,31 +215,6 @@
       @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
-      }
-      
-      body{
-        background-color: #FAF0E7;
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Gelasio", serif;
-        color: #2C2C35;
-      }
-      
-      p{
-        margin: 0px 25px 30px 25px;
-      }
-      
-      #last-img{
-        margin-right: 25px;
-      }
-      
-      .divider{
-        width: 100%;
-        height: 20px;
-        background-color: #DE98E6;
-        margin-top: -6px;
-        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -227,25 +230,28 @@
     </div>
     
     <div class="wrapper-slides">
-      <!-- Slideshow container -->
       <div class="slideshow-container">
-        <!-- Full-width images -->
         <div class="mySlides fade">
           <img src="website-p1.png" alt="Home page on the left, menu page on the right. Sports bar style, pictures of grills, burgers, wings and people drinking beer. Prominent colours include dark greys, light greys, off-white and a bold orange accent">
         </div>
-
         <div class="mySlides fade">
           <img src="website-p3.png" alt="Gallery page on the left, About Us page on the right. We see pictures of the interior, food, the owners and community events. Prominent colours include dark greys, light greys, off-white and a bold orange accent">
         </div>
-
         <div class="mySlides fade">
           <img src="og-sitemap.png" alt="A sitemap showing the original layout of Tina's Grill website. We see four main pages with very little sub-sections and a lot of repeating information.">
         </div>
-
         <div class="mySlides fade">
           <img src="upd-sitemap.png" alt="A sitemap showing the updated layout of Tina's Grill website. We now see five main pages with multiple sub-sections organized logically with no repeating information.">
         </div>
 
+        <!-- 
+          Below is code copied from: https://www.youtube.com/watch?v=1CZhGDU5cWM&t=421s&ab_channel=AnnaBlok%E2%80%94FrontendTutorial
+          Author: Anna Bloc Frontend Tutorial
+          Name: Responsive Slider Using HTML & CSS Only
+          Description: Video walks through steps to create an image slider with progress dots and side nav arrows.
+          Date retrieved: March 15th 2025
+        -->
+        
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -264,12 +270,10 @@
         let slideIndex = 1;
         showSlides(slideIndex);
         
-        // Next/previous controls
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
